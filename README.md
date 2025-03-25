@@ -30,7 +30,7 @@ TaskFlow is a simple and efficient task management web application designed to h
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/RahulSidar08/TaskFlow.git  
+git clone https://github.com/RahulSidar08/TaskFlow.git
 ```
 ## Backend Setup
 
