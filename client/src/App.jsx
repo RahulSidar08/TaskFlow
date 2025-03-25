@@ -11,6 +11,8 @@ import {HeroSection} from "./components/Home/HeroSection.jsx";
 import Footer from "./components/Home/Footer.jsx";
 import { AllTasks } from "./components/AllTasks.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const appRouter = createBrowserRouter([
   {
     path : "/",
@@ -57,6 +59,7 @@ const App = () => {
     <div>
       <RouterProvider router={appRouter} />
     </div>
+    <ToastContainer position="top-right" autoClose={3000} />
     </>
   );
 };
