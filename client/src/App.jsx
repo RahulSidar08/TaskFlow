@@ -1,13 +1,20 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Button } from "@mui/material";
-import {TextField} from "@mui/material";
-import { BrowserRouter, Routes, Route, createBrowserRouter,RouterProvider, Outlet } from "react-router-dom";
+import { TextField } from "@mui/material";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+} from "react-router-dom";
 import { Login } from "./components/authentication/Login.jsx";
 import { Signup } from "./components/authentication/Signup.jsx";
 import { TaskInput } from "./components/TaskInput.jsx";
 import { Navbar } from "./components/Home/Navbar.jsx";
-import {HeroSection} from "./components/Home/HeroSection.jsx";
+import { HeroSection } from "./components/Home/HeroSection.jsx";
 import Footer from "./components/Home/Footer.jsx";
 import { AllTasks } from "./components/AllTasks.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
@@ -15,58 +22,59 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const appRouter = createBrowserRouter([
   {
-    path : "/",
-    element : <div>
-      <ToastContainer position="top-right" autoClose={3000}>
-      <Navbar/>
-      <HeroSection/>
-      <Footer/>
-      </ToastContainer>
-    </div>
-    
+    path: "/",
+    element: (
+      <div>
+        <Navbar />
+        <HeroSection />
+        <Footer />
+      </div>
+    ),
   },
   {
-    path : "/signup",
-    element : <div>
-      <ToastContainer position="top-right" autoClose={3000}>
-      <Signup/>
-
-      </ToastContainer>
-    </div>
+    path: "/signup",
+    element: (
+      <div>
+        <Signup />
+      </div>
+    ),
   },
   {
-    path : "/login",
-    element : <div>
-      <ToastContainer position="top-right" autoClose={3000}>
-      <Login/>
-      </ToastContainer>
-    </div>
+    path: "/login",
+    element: (
+      <div>
+        <Login />
+      </div>
+    ),
   },
   {
-    path : "/create",
-    element : <div>
-      <ProtectedRoute>
-      <TaskInput/>
-      </ProtectedRoute>
-    </div>
+    path: "/create",
+    element: (
+      <div>
+        <ProtectedRoute>
+          <TaskInput />
+        </ProtectedRoute>
+      </div>
+    ),
   },
   {
-    path : "/view",
-    element : <div>
-      <ProtectedRoute>
-      <AllTasks/>
-      </ProtectedRoute>
-    </div>
-  }
-])
+    path: "/view",
+    element: (
+      <div>
+        <ProtectedRoute>
+          <AllTasks />
+        </ProtectedRoute>
+      </div>
+    ),
+  },
+]);
 const App = () => {
-
   return (
     <>
-    <div>
-      <RouterProvider router={appRouter} />
-    </div>
-    <ToastContainer position="top-right" autoClose={3000} />
+      <div>
+        <RouterProvider router={appRouter} />
+      </div>
+      <ToastContainer position="top-right" autoClose={3000} />
     </>
   );
 };
