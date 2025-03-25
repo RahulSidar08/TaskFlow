@@ -11,14 +11,17 @@ const app = express();
 const port = process.env.port || 5000;
 connectDb()
 const _dirname = path.resolve()
-app.get("/" , (Req,res) => {
-    res.send("It is working")
-})
 
-app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({extended:true}));
+const corsOptions = {
+    origin:'http://localhost:5173/',
+    credentials:true
+}
 
+app.use(cors(corsOptions));
+
+const PORT = process.env.PORT || 8000;
 
 app.use("/user",userRoutes)
 app.use("/task",taskRoutes)
