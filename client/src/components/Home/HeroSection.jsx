@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 import { Container, Typography, Box } from "@mui/material";
 
-const HeroSection = () => {
+export const HeroSection = () => {
   return (
     <Box
       sx={{
@@ -40,5 +40,3 @@ const HeroSection = () => {
     </Box>
   );
 };
-
-export default HeroSection;
