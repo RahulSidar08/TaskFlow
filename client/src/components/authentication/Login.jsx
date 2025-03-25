@@ -11,14 +11,12 @@ import {
 import { Link } from "react-router-dom";
 import { useDispatch,useSelector } from "react-redux";
 import { loginUser } from "../../redux/authSlice.js";
-import { useNavigate } from "react-router-dom";
 export const Login = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const navigate = useNavigate()
   const dispatch = useDispatch();
   const { loading, error } = useSelector((state) => state.auth);
   const onSubmit = (data) => {
@@ -27,9 +25,6 @@ export const Login = () => {
       password : data.password
     }
     dispatch(loginUser(credentials))
-    setTimeout(() => {
-      navigate("/");
-    }, 3500); 
   };
 
   return (

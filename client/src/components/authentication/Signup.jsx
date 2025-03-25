@@ -10,7 +10,6 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { registerUser } from "../../redux/authSlice";
 
 export const Signup = () => {
@@ -21,7 +20,6 @@ export const Signup = () => {
   } = useForm();
 
   let dispatch = useDispatch()
-  const navigate = useNavigate()
   const onSubmit = (data) => {
     const userData = {
       username : data.username,
@@ -29,9 +27,6 @@ export const Signup = () => {
       password : data.password
     }
     dispatch(registerUser(userData))
-    setTimeout(() => {
-      navigate("/");
-    }, 3500); 
   };
 
   return (
