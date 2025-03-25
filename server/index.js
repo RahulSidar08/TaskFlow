@@ -15,7 +15,7 @@ const _dirname = path.resolve()
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 const corsOptions = {
-    origin:'http://localhost:5173/',
+    origin:'https://taskflow-xzmc.onrender.com',
     credentials:true
 }
 
