@@ -19,6 +19,7 @@ Fetching Tasks – fetchTasks asynchronously retrieves all tasks from the backen
 Adding Tasks – addTaskAsync sends a new task to the backend and updates the state only when the request succeeds.
 <hr/>
 Deleting Tasks – deleteTasks removes a task from the database and then updates the frontend store accordingly.
+<hr/>
 ## Tech Stack
 Frontend: React.js, Material-UI, Redux Toolkit
 <hr/>
