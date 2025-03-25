@@ -6,7 +6,7 @@ export const registerUser = createAsyncThunk(
   "auth/registerUser",
   async (userData, { rejectWithValue }) => {
     try {
-      const response = await axios.post("http://localhost:3000/user/signup", userData);
+      const response = await axios.post(" https://taskflow-xzmc.onrender.com/user/signup", userData);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data?.message || "Registration failed");
@@ -19,7 +19,7 @@ export const loginUser = createAsyncThunk(
   "auth/loginUser",
   async (credentials, { rejectWithValue }) => {
     try {
-      const response = await axios.post("http://localhost:3000/user/login", credentials);
+      const response = await axios.post(" https://taskflow-xzmc.onrender.com/user/login", credentials);
       console.log(response)
       localStorage.setItem("user", JSON.stringify(response.data.user));
       localStorage.setItem("token", response.data.token);

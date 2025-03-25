@@ -4,7 +4,7 @@ import axios from "axios";
 // Async thunk to fetch tasks
 export const fetchTasks = createAsyncThunk("tasks/fetchTasks", async (_,{rejectWithValue}) => {
   try {
-    const response = await axios.get("http://localhost:3000/task/viewAll");
+    const response = await axios.get(" https://taskflow-xzmc.onrender.com/task/viewAll");
     console.log(response.data)
     if (!response.data || response.data.length === 0) {
       return [];
@@ -18,7 +18,7 @@ export const fetchTasks = createAsyncThunk("tasks/fetchTasks", async (_,{rejectW
 export const deleteTasks = createAsyncThunk("tasks/deleteTasks", async (taskId,{rejectWithValue}) => {
   try {
     const response = await axios.post(
-      `http://localhost:3000/task/delete/${taskId}`,
+      ` https://taskflow-xzmc.onrender.com/task/delete/${taskId}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -36,7 +36,7 @@ export const addTaskAsync = createAsyncThunk(
   async (taskData, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/task/create",
+        " https://taskflow-xzmc.onrender.com/task/create",
         taskData,
         {
           headers: {
