@@ -1,5 +1,5 @@
 ## TaskFlow 📝🚀
-TaskFlow is a simple and efficient task management web application designed to help users organize their daily tasks effortlessly. With features like task creation, prioritization, and deletion, TaskFlow ensures a smooth and productive workflow.
+TaskFlow is a simple and efficient task management web application designed to help users organize their daily tasks effortlessly. With features like task creation, prioritization, and deletion, TaskFlow ensures a smooth and productive workflow. The application utilizes Redux Thunk for handling asynchronous operations, such as fetching and updating tasks from an API, ensuring a seamless user experience with efficient state management.
 
 
 ## Features
