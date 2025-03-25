@@ -6,7 +6,6 @@ import { useDispatch } from "react-redux";
 
 export const Navbar = () => {
   const [user, setUser] = useState();
-  console.log("user from loal storage: ", user);
   const dispatch = useDispatch()
   useEffect(() => {
     if (localStorage.getItem("user")) {

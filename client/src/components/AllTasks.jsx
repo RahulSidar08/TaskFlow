@@ -18,7 +18,6 @@ export const AllTasks = () => {
   useEffect(() => {
     dispatch(fetchTasks());
   }, []);
-  console.log(tasks);
   return (
     <>
       <Container maxWidth="sm" sx={{ mt: 4 }}>

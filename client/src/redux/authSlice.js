@@ -1,13 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { toast } from "react-toastify";
+
+
 // Async thunk for user registration
 export const registerUser = createAsyncThunk(
   "auth/registerUser",
   async (userData, { rejectWithValue }) => {
     try {
       const response = await axios.post(" https://taskflow-xzmc.onrender.com/user/signup", userData);
-      toast.success("Registered successful! 🎉");
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data?.message || "Registration failed");
@@ -24,7 +24,6 @@ export const loginUser = createAsyncThunk(
       console.log(response)
       localStorage.setItem("user", JSON.stringify(response.data.user));
       localStorage.setItem("token", response.data.token);
-      toast.success("Login successful! 🎉");
       return response.data.user;
     } catch (error) {
       return rejectWithValue(error.response?.data?.message || "Invalid credentials");

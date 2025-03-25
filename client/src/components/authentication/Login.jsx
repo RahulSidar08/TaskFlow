@@ -22,7 +22,6 @@ export const Login = () => {
   const dispatch = useDispatch();
   const { loading, error } = useSelector((state) => state.auth);
   const onSubmit = (data) => {
-    console.log("Login Data:", data);
     const credentials = {
       email : data.email,
       password : data.password

@@ -21,7 +21,6 @@ export const Signup = () => {
 
   let dispatch = useDispatch()
   const onSubmit = (data) => {
-    console.log("Signup Data:", data);
     const userData = {
       username : data.username,
       email : data.email,
