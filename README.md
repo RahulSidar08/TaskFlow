@@ -56,5 +56,5 @@ npm start
 🌐 Live Demo
 
 ```bash
-will update soon...
+will be updated soon...
 ```
