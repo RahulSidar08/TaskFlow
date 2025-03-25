@@ -7,7 +7,7 @@ import { Login } from "./components/authentication/Login.jsx";
 import { Signup } from "./components/authentication/Signup.jsx";
 import { TaskInput } from "./components/TaskInput.jsx";
 import { Navbar } from "./components/Home/Navbar.jsx";
-import HeroSection from "./components/Home/Herosection.jsx";
+import HeroSection from "./components/Home/Herosection";
 import Footer from "./components/Home/Footer.jsx";
 import { AllTasks } from "./components/AllTasks.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
