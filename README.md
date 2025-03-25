@@ -56,5 +56,5 @@ npm start
 🌐 Live Demo
 
 ```bash
-https://mern-chat-nfyf.onrender.com/ 
+will update soon...
 ```
