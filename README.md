@@ -11,9 +11,15 @@ Task Prioritization – Set priority levels for better organization
 Responsive UI – Optimized for all devices
 <hr/>
  Redux Toolkit Integration – Efficient state management
-
-Tech Stack
 <hr/>
+Redux Thunk - Redux Thunk is used in this project to handle asynchronous API calls efficiently.
+<hr/>
+Fetching Tasks – fetchTasks asynchronously retrieves all tasks from the backend and updates the Redux store.
+<hr/>
+Adding Tasks – addTaskAsync sends a new task to the backend and updates the state only when the request succeeds.
+<hr/>
+Deleting Tasks – deleteTasks removes a task from the database and then updates the frontend store accordingly.
+## Tech Stack
 Frontend: React.js, Material-UI, Redux Toolkit
 <hr/>
 Backend: Node.js, Express.js
