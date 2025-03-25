@@ -13,10 +13,11 @@ Responsive UI – Optimized for all devices
  Redux Toolkit Integration – Efficient state management
 
 Tech Stack
+<hr/>
 Frontend: React.js, Material-UI, Redux Toolkit
-
+<hr/>
 Backend: Node.js, Express.js
-
+<hr/>
 Database: MongoDB
 
 
