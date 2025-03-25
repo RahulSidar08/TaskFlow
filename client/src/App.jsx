@@ -17,22 +17,29 @@ const appRouter = createBrowserRouter([
   {
     path : "/",
     element : <div>
+      <ToastContainer position="top-right" autoClose={3000}>
       <Navbar/>
       <HeroSection/>
       <Footer/>
+      </ToastContainer>
     </div>
     
   },
   {
     path : "/signup",
     element : <div>
+      <ToastContainer position="top-right" autoClose={3000}>
       <Signup/>
+
+      </ToastContainer>
     </div>
   },
   {
     path : "/login",
     element : <div>
+      <ToastContainer position="top-right" autoClose={3000}>
       <Login/>
+      </ToastContainer>
     </div>
   },
   {
