@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { toast } from "react-toastify";
-
 // Async thunk for user registration
 export const registerUser = createAsyncThunk(
   "auth/registerUser",
