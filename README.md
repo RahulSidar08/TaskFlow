@@ -35,16 +35,8 @@ git clone https://github.com/RahulSidar08/TaskFlow.git
 ## Backend Setup
 
 ```bash
-cd server  
 npm install  
-npm start 
-```
-## Frontend Setup
-
-```bash
-cd client  
-npm install  
-npm start  
+npm run dev
 ```
 🌐 Live Demo
 
