@@ -1,11 +1,11 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { Navigate } from "react-router-dom";
 import { toast } from "react-toastify";
-
 // Async thunk to fetch tasks
 export const fetchTasks = createAsyncThunk("tasks/fetchTasks", async (_,{rejectWithValue}) => {
   try {
-    const response = await axios.get(" https://taskflow-xzmc.onrender.com/task/viewAll");
+    const response = await axios.get("https://taskflow-xzmc.onrender.com/task/viewAll");
     console.log(response.data)
     if (!response.data || response.data.length === 0) {
       return [];
@@ -49,6 +49,7 @@ export const addTaskAsync = createAsyncThunk(
         }
       );
       toast.success("Task Created Successfully");
+      <Navigate to="/view"/>;
       return response.data;
     } catch (error) {
       toast.error(error.response?.data?.message || "Something went wrong")
