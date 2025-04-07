@@ -25,6 +25,7 @@ export const deleteTasks = createAsyncThunk("tasks/deleteTasks", async (taskId,{
         },
       }
     );
+    toast.success("Task deleted Successfully");
     return response.data;
   } catch (error) {
     return rejectWithValue(error.response?.data ?.message|| "Something went wrong");
@@ -44,7 +45,7 @@ export const addTaskAsync = createAsyncThunk(
           },
         }
       );
-
+      toast.success("Task Created Successfully");
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data?.message || "Something went wrong");
