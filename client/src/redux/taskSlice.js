@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 // Async thunk to fetch tasks
 export const fetchTasks = createAsyncThunk("tasks/fetchTasks", async (_,{rejectWithValue}) => {
@@ -11,6 +12,7 @@ export const fetchTasks = createAsyncThunk("tasks/fetchTasks", async (_,{rejectW
     }
     return response.data.tasks;
   } catch (error) {
+    toast.error(error.response?.data?.message || "Something went wrong")
     return rejectWithValue(error.response?.data?.message || "Something went wrong");
   }
 });
@@ -28,6 +30,7 @@ export const deleteTasks = createAsyncThunk("tasks/deleteTasks", async (taskId,{
     toast.success("Task deleted Successfully");
     return response.data;
   } catch (error) {
+    toast.error(error.response?.data?.message || "Something went wrong")
     return rejectWithValue(error.response?.data ?.message|| "Something went wrong");
   }
 });
@@ -48,6 +51,7 @@ export const addTaskAsync = createAsyncThunk(
       toast.success("Task Created Successfully");
       return response.data;
     } catch (error) {
+      toast.error(error.response?.data?.message || "Something went wrong")
       return rejectWithValue(error.response?.data?.message || "Something went wrong");
     }
   }
