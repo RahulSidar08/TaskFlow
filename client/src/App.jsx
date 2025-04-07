@@ -71,9 +71,7 @@ const appRouter = createBrowserRouter([
 const App = () => {
   return (
     <>
-      <div>
         <RouterProvider router={appRouter} />
-      </div>
       <ToastContainer position="top-right" autoClose={3000} />
     </>
   );
