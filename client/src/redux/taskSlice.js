@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { Navigate } from "react-router-dom";
 import { toast } from "react-toastify";
 // Async thunk to fetch tasks
 export const fetchTasks = createAsyncThunk("tasks/fetchTasks", async (_,{rejectWithValue}) => {
@@ -49,7 +48,6 @@ export const addTaskAsync = createAsyncThunk(
         }
       );
       toast.success("Task Created Successfully");
-      <Navigate to="/view"/>;
       return response.data;
     } catch (error) {
       toast.error(error.response?.data?.message || "Something went wrong")
